@@ -1,0 +1,13 @@
+.body {
+    font-size: rem(26);
+    line-height: 1.5;
+    background-color: $light;
+    font-family: $font;
+    color: $dark;
+    padding-left: rem(65);
+    padding-right: rem(65);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
