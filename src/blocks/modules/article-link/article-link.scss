@@ -1,0 +1,33 @@
+.article-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    padding-top: rem(20);
+    padding-bottom: rem(20);
+    border-bottom: 1px solid #BFBDBE;
+    &:last-of-type {
+        border-bottom: none;
+    }
+    &:hover {
+        .article-link {
+            &__discription {
+
+            }
+            &__title {
+                text-decoration: none;
+                color: $grey;
+            }
+        }
+    }
+    &__discription {
+        font-size: rem(20);
+        color: $grey;
+        margin-bottom: rem(26);
+    }
+    &__title {
+        font-size: rem(34);
+        text-decoration: underline;
+        line-height: 1.1;
+        transition: 0.3s all;
+    }
+}

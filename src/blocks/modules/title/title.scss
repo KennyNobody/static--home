@@ -1,0 +1,22 @@
+.title {
+    font-size: rem(65);
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    width: fit-content;
+    text-transform: uppercase;
+    font-weight: 400;
+    position: relative;
+    line-height: 1.1;
+    @include r(1920) {
+        font-size: rem(45);
+    }
+    @include r(1280) {
+        font-size: rem(30);
+        font-weight: 500;
+    }
+
+    &:hover {
+        color: $grey;
+    }
+}

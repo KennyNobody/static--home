@@ -1,4 +1,4 @@
-modules.define('container', ['i-bem-dom'], function(provide, bemDom) {
+modules.define('nav', ['i-bem-dom'], function(provide, bemDom) {
 
 provide(bemDom.declBlock(this.name, {
     onSetMod: {

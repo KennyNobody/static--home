@@ -4,10 +4,18 @@
     background-color: $light;
     font-family: $font;
     color: $dark;
-    padding-left: rem(65);
-    padding-right: rem(65);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding-left: rem(65);
+    padding-right: rem(65);
+    @include r(1920) {
+        padding-left: rem(45);
+        padding-right: rem(45);
+    }
+    @include r(1280) {
+        padding-left: rem(19);
+        padding-right: rem(19);
+    }
 }

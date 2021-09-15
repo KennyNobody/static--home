@@ -3,6 +3,18 @@
 @import "modules/footer/footer";
 @import "modules/section/section";
 @import "modules/main/main";
-@import "modules/container/container";
+@import "modules/nav/nav";
 @import "modules/columns/columns";
+/**/ @import "modules/discription/discription";
+@import "modules/title/title";
+@import "modules/link/link";
 
+@import "modules/article-link/article-link";
+@import "modules/article-post/article-post";
+
+@include r(1920) {
+    
+}
+@include r(1280) {
+    
+}
