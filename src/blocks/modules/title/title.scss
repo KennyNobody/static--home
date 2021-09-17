@@ -7,13 +7,15 @@
     text-transform: uppercase;
     font-weight: 400;
     position: relative;
-    line-height: 1.1;
+    line-height: rem(74);
     @include r(1920) {
         font-size: rem(45);
+        line-height: rem(51);
     }
     @include r(1280) {
         font-size: rem(30);
         font-weight: 500;
+        line-height: rem(30);
     }
 
     &:hover {

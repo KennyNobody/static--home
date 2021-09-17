@@ -4,14 +4,20 @@
     text-decoration: none;
     padding-top: rem(20);
     padding-bottom: rem(20);
-    border-bottom: 1px solid #BFBDBE;
+    border-bottom: 1px solid #bfbdbe;
+    @include r(1920) {
+    }
+    @include r(1280) {
+        padding-top: rem(17);
+        padding-bottom: rem(17);
+    }
+
     &:last-of-type {
         border-bottom: none;
     }
     &:hover {
         .article-link {
             &__discription {
-
             }
             &__title {
                 text-decoration: none;
@@ -23,11 +29,23 @@
         font-size: rem(20);
         color: $grey;
         margin-bottom: rem(26);
+        line-height: rem(23);
+        @include r(1920) {
+            margin-bottom: rem(18);
+        }
+        @include r(1280) {
+        }
     }
     &__title {
         font-size: rem(34);
         text-decoration: underline;
-        line-height: 1.1;
+        line-height: rem(40);
         transition: 0.3s all;
+        @include r(1920) {
+            font-size: rem(26);
+            line-height: rem(30);
+        }
+        @include r(1280) {
+        }
     }
 }

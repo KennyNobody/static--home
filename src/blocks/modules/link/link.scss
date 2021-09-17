@@ -10,8 +10,10 @@
     line-height: 1.1;
     padding-top: rem(20);
     padding-bottom: rem(20);
+    position: relative;
     @include r(1920) {
         font-size: rem(45);
+        padding-bottom: rem(12);
     }
     @include r(1280) {
         font-size: rem(16);
@@ -27,13 +29,17 @@
     &--active {
         &:after {
             position: absolute;
-            top: 100%;
-            height: rem(5);
+            top: calc(100% - 5px);
+            height: 5px;
             display: block;
             background-color: $dark;
             width: 100%;
             left: 0;
             content: "";
+            @include r(1280) {
+                top: calc(100% - 2px);
+                height: 2px;
+            }
         }
     }
 }

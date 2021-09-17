@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Одиночный проект</title>
+    @@include("../blocks/modules/head/head.html")
+</head>
+
+<body class="body">
+    @@include("../blocks/modules/header/header.html")
+    <main class="main">
+        <section class="section section--border pt-38 ptt-22 pb-75 pbt-73 ptm-26 pbm-50">
+            <div class="mb-40 mbt-37 mbm-32">
+                <a href="./" class="link-back">
+                    Назад
+                </a>
+            </div>
+            <div class="columns">
+                <div class="columns__column columns__column--12">
+                    <p class="discription mb-20 mbt-15 ">
+                        Имя Автора
+                    </p>
+                    <a href="./projects.html" class="title mb-30 mbm-17">
+                        Граница
+                    </a>
+                    <time class="discription mb-40" datetime="2001-05-15 19:00">
+                        15 Июня 2020
+                    </time>
+                    <nav class="tags mb-40 mob-hidden">
+                        <a href="" class="tags__tag">#самогон</a>
+                        <a href="" class="tags__tag">#типы</a>
+                        <a href="" class="tags__tag">#аквамен</a>
+                        <a href="" class="tags__tag">#ЯМЫГеннадий</a>
+                        <a href="" class="tags__tag">#гдежегдежевотжетут</a>
+                    </nav>
+                    @@include("../blocks/modules/share/share.html")
+                </div>
+                <div class="columns__column columns__column--19">
+                    @@include("../blocks/modules/gallery/gallery.html")
+                </div>
+            </div>
+        </section>
+    </main>
+    @@include("../blocks/modules/footer/footer.html")
+    <script src="js/main.js"></script>
+    <script src="js/vendor.js"></script>
+</body>
+
+</html>

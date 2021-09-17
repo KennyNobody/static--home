@@ -1,5 +1,8 @@
 .section {
     &--border {
         border-top: 1px solid $grey;
+        @include r(1280) {
+            border: none;
+        }
     }
 }

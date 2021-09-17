@@ -1,0 +1,13 @@
+.share {
+    &__title {
+        font-size: rem(26);
+        margin-bottom: rem(10);
+        @include r(1920) {
+            font-size: rem(22);
+            margin-bottom: rem(8);
+        }
+        @include r(1280) {
+            font-size: rem(16);
+        }
+    }
+}
