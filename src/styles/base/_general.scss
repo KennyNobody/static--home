@@ -36,6 +36,9 @@ button {
     &-71 {
         margin-bottom: rem(71);
     }
+    &-80 {
+        margin-bottom: rem(80);
+    }
 }
 
 .mbt {
@@ -56,6 +59,11 @@ button {
             margin-bottom: rem(37);
         }
     }
+     &-48 {
+        @include r(1920) {
+            margin-bottom: rem(48);
+        }
+    }
     &-51 {
         @include r(1920) {
             margin-bottom: rem(51);
@@ -67,6 +75,11 @@ button {
     &-0 {
         @include r(1200) {
             margin-bottom: rem(0);
+        }
+    }
+    &-15 {
+        @include r(1200) {
+            margin-bottom: rem(15);
         }
     }
     &-17 {
@@ -87,6 +100,11 @@ button {
     &-32 {
         @include r(1200) {
             margin-bottom: rem(32);
+        }
+    }
+    &-48 {
+        @include r(1200) {
+            margin-bottom: rem(48);
         }
     }
 }
@@ -140,6 +158,11 @@ button {
             padding-top: rem(30);
         }
     }
+    &-41 {
+        @include r(1920) {
+            padding-top: rem(41);
+        }
+    }
     &-50 {
         @include r(1920) {
             padding-top: rem(50);
@@ -153,6 +176,11 @@ button {
 }
 
 .ptm {
+    &-10 {
+        @include r(1200) {
+            padding-top: rem(10);
+        }
+    }
     &-12 {
         @include r(1200) {
             padding-top: rem(12);

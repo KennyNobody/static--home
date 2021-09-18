@@ -1472,6 +1472,10 @@ button {
   margin-bottom: 4.4375rem;
 }
 
+.mb-80 {
+  margin-bottom: 5rem;
+}
+
 .pt-21 {
   padding-top: 1.3125rem;
 }
@@ -1555,13 +1559,12 @@ button {
   justify-content: space-between;
   padding-left: 4.0625rem;
   padding-right: 4.0625rem;
+  line-height: 2.5rem;
 }
 
 .footer {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  border-top: 1px solid #575757;
 }
 
 /**/
@@ -1735,6 +1738,10 @@ button {
   color: #101010;
 }
 
+.discription--right {
+  text-align: right;
+}
+
 .discription a {
   text-decoration: none;
   color: inherit;
@@ -1759,6 +1766,71 @@ button {
 
 .editor--title p {
   margin-bottom: 0.5rem;
+}
+
+.editor--post h1,
+.editor--post h2,
+.editor--post h3,
+.editor--post h4,
+.editor--post h5,
+.editor--post h6 {
+  margin-bottom: 1em;
+}
+
+.editor--post h1 {
+  font-size: 3rem;
+}
+
+.editor--post h2 {
+  font-size: 2.125rem;
+}
+
+.editor--post h3 {
+  font-size: 1.75rem;
+}
+
+.editor--post a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.editor--post a:hover {
+  text-decoration: none;
+}
+
+.editor--post i {
+  font-style: italic;
+}
+
+.editor--post b,
+.editor--post strong {
+  font-weight: 600;
+}
+
+.editor--post p {
+  margin-bottom: 1rem;
+}
+
+.editor--post figure,
+.editor--post picture,
+.editor--post img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.editor--post figure {
+  margin-bottom: 3.75rem;
+  margin-top: 3.75rem;
+  width: 100%;
+  height: auto;
+}
+
+.editor--post figcaption {
+  font-size: 1.25rem;
+  margin-top: 0.625rem;
+  line-height: 1.2;
+  color: #575757;
 }
 
 /**/
@@ -1798,7 +1870,7 @@ button {
   text-transform: uppercase;
   font-weight: 400;
   position: relative;
-  line-height: 1.1;
+  line-height: 4.625rem;
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
   position: relative;
@@ -1863,6 +1935,14 @@ button {
   gap: 3.375rem 3.5625rem;
 }
 
+.separator {
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-color: #C4C4C4;
+  border: none;
+}
+
 /**/
 
 .article-link {
@@ -1899,44 +1979,107 @@ button {
 
 /**/
 
-.article-post {
+.article-project {
   display: block;
   color: inherit;
   text-decoration: none;
 }
 
-.article-post__picture {
+.article-project__picture {
   display: block;
   margin-bottom: 1.25rem;
   width: 100%;
   height: auto;
 }
 
-.article-post__img {
+.article-project__img {
   display: block;
   width: 100%;
   height: auto;
 }
 
-.article-post__title {
+.article-project__title {
   font-size: 2.125rem;
   margin-bottom: 1.25rem;
   line-height: 2.5rem;
 }
 
-.article-post__discription {
+.article-project__discription {
   font-size: 1.5rem;
   line-height: 2rem;
 }
 
+.article-post {
+  padding-bottom: 3.75rem;
+}
+
+.article-post__preview {
+  display: none;
+  visibility: hidden;
+}
+
+.article-post__preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.article-post__tag {
+  display: none;
+  visibility: hidden;
+}
+
+.article-post__title {
+  margin-bottom: 2.0625rem;
+  font-size: 3.4375rem;
+  line-height: 3.9375rem;
+}
+
+.article-post__title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.article-post__title a:hover {
+  color: #575757;
+}
+
+.article-post__content {
+  margin-bottom: 2.75rem;
+}
+
+.article-post__tags {
+  margin-bottom: 2.3125rem;
+}
+
+.article-post__link {
+  font-size: 1.625rem;
+  padding-top: 0.1875rem;
+  padding-bottom: 0.1875rem;
+  font-size: 1.875rem;
+  text-decoration: underline;
+  color: inherit;
+}
+
+.article-post__link:hover {
+  text-decoration: none;
+}
+
 /**/
+
+.tags {
+  font-size: 1.625rem;
+}
+
+.tags--article {
+  font-size: 1.375rem;
+}
 
 .tags__tag {
   color: #575757;
   text-decoration: none;
   display: inline-block;
   margin-right: 0.625rem;
-  font-size: 1.625rem;
   line-height: 2.375rem;
 }
 
@@ -2012,6 +2155,10 @@ button {
     margin-bottom: 2.3125rem;
   }
 
+  .mbt-48 {
+    margin-bottom: 3rem;
+  }
+
   .mbt-51 {
     margin-bottom: 3.1875rem;
   }
@@ -2026,6 +2173,10 @@ button {
 
   .ptt-30 {
     padding-top: 1.875rem;
+  }
+
+  .ptt-41 {
+    padding-top: 2.5625rem;
   }
 
   .ptt-50 {
@@ -2056,6 +2207,7 @@ button {
     padding-left: 2.8125rem;
     padding-right: 2.8125rem;
     font-size: 1.375rem;
+    line-height: 2.25rem;
   }
 
   .columns {
@@ -2084,6 +2236,28 @@ button {
     margin-bottom: 0.4375rem;
   }
 
+  .editor--post h1 {
+    font-size: 2.375rem;
+  }
+
+  .editor--post h2 {
+    font-size: 1.625rem;
+  }
+
+  .editor--post h3 {
+    font-size: 1.5rem;
+  }
+
+  .editor--post figure {
+    margin-top: 3.4375rem;
+    margin-bottom: 3.4375rem;
+  }
+
+  .editor--post figcaption {
+    margin-top: 0.5rem;
+    font-size: 1.125rem;
+  }
+
   .title {
     font-size: 2.8125rem;
     line-height: 3.1875rem;
@@ -2095,7 +2269,8 @@ button {
 
   .link {
     font-size: 2.8125rem;
-    padding-bottom: 0.75rem;
+    line-height: 3.1875rem;
+    padding-bottom: 0.625rem;
   }
 
   .link-back {
@@ -2121,15 +2296,34 @@ button {
     line-height: 1.875rem;
   }
 
-  .article-post__title {
+  .article-project__title {
     font-size: 1.625rem;
     margin-bottom: 0.8125rem;
     line-height: 1.875rem;
   }
 
-  .article-post__discription {
+  .article-project__discription {
     font-size: 1.25rem;
     line-height: 1.625rem;
+  }
+
+  .article-post {
+    padding-bottom: 2.25rem;
+  }
+
+  .article-post__title {
+    margin-bottom: 1.25rem;
+    font-size: 2.5rem;
+    line-height: 2.875rem;
+  }
+
+  .article-post__content {
+    margin-bottom: 1.625rem;
+  }
+
+  .article-post__link {
+    font-size: 1.375rem;
+    line-height: 2.25rem;
   }
 
   .tags__tag {
@@ -2181,7 +2375,8 @@ button {
   .body {
     padding-left: 1.1875rem;
     padding-right: 1.1875rem;
-    font-size: 1.125rem;
+    font-size: 1rem;
+    line-height: 1.625rem;
   }
 
   .footer {
@@ -2190,6 +2385,11 @@ button {
 
   .section--border {
     border: none;
+  }
+
+  .columns {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+    gap: 0;
   }
 
   .discription {
@@ -2215,6 +2415,23 @@ button {
     margin-bottom: 0.875rem;
   }
 
+  .editor--post h1 {
+    font-size: 2rem;
+  }
+
+  .editor--post h2 {
+    font-size: 1.375rem;
+  }
+
+  .editor--post h3 {
+    font-size: 1.25rem;
+  }
+
+  .editor--post figure {
+    margin-top: 2.25rem;
+    margin-bottom: 2.25rem;
+  }
+
   .title {
     font-size: 1.875rem;
     font-weight: 500;
@@ -2228,11 +2445,16 @@ button {
 
   .link {
     font-size: 1rem;
+    line-height: 1.375rem;
     padding-top: 0;
-    padding-bottom: 0;
+    padding-bottom: 0.3125rem;
     font-weight: 400;
-    line-height: 1.3;
     text-transform: none;
+  }
+
+  .link--name {
+    font-weight: 600;
+    font-size: 0.875rem;
   }
 
   .link--active:after {
@@ -2264,19 +2486,60 @@ button {
     padding-bottom: 1.0625rem;
   }
 
-  .article-post__picture {
+  .article-project__picture {
     margin-bottom: 0.8125rem;
   }
 
-  .article-post__title {
+  .article-project__title {
     font-size: 1.375rem;
     margin-bottom: 0.625rem;
     line-height: 1.5625rem;
   }
 
-  .article-post__discription {
+  .article-project__discription {
     font-size: 1rem;
     line-height: 1.375rem;
+  }
+
+  .article-post {
+    padding-bottom: 1.0625rem;
+  }
+
+  .article-post__preview {
+    display: block;
+    visibility: visible;
+    margin-bottom: 1.1875rem;
+  }
+
+  .article-post__tag {
+    display: block;
+    visibility: visible;
+    font-size: 0.875rem;
+    margin-bottom: 0.9375rem;
+    line-height: 1rem;
+    color: #575757;
+  }
+
+  .article-post__title {
+    font-size: 1.375rem;
+    line-height: 1.5625rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .article-post__content figure,
+  .article-post__content picture,
+  .article-post__content img {
+    display: none;
+    visibility: hidden;
+  }
+
+  .article-post__tags {
+    margin-bottom: 1.0625rem;
+  }
+
+  .article-post__link {
+    font-size: 0.875rem;
+    line-height: 1rem;
   }
 
   .tags__tag {
@@ -2307,6 +2570,10 @@ button {
     margin-bottom: 0rem;
   }
 
+  .mbm-15 {
+    margin-bottom: 0.9375rem;
+  }
+
   .mbm-17 {
     margin-bottom: 1.0625rem;
   }
@@ -2321,6 +2588,14 @@ button {
 
   .mbm-32 {
     margin-bottom: 2rem;
+  }
+
+  .mbm-48 {
+    margin-bottom: 3rem;
+  }
+
+  .ptm-10 {
+    padding-top: 0.625rem;
   }
 
   .ptm-12 {
@@ -2398,79 +2673,127 @@ button {
   }
 
   .columns__column--3 {
-    grid-column: span 31;
+    grid-column: span 4;
   }
 
   .columns__column--4 {
-    grid-column: span 31;
+    grid-column: span 4;
   }
 
   .columns__column--5 {
-    grid-column: span 31;
+    grid-column: span 4;
   }
 
   .columns__column--6 {
-    grid-column: span 31;
+    grid-column: span 4;
   }
 
   .columns__column--7 {
-    grid-column: span 31;
+    grid-column: span 4;
   }
 
   .columns__column--8 {
-    grid-column: span 31;
+    grid-column: span 4;
   }
 
   .columns__column--9 {
-    grid-column: span 31;
+    grid-column: span 4;
   }
 
   .columns__column--10 {
-    grid-column: span 31;
+    grid-column: span 4;
   }
 
   .columns__column--11 {
-    grid-column: span 31;
+    grid-column: span 4;
   }
 
   .columns__column--12 {
-    grid-column: span 31;
+    grid-column: span 4;
   }
 
   .columns__column--13 {
-    grid-column: span 31;
+    grid-column: span 4;
   }
 
   .columns__column--14 {
-    grid-column: span 31;
+    grid-column: span 4;
   }
 
   .columns__column--15 {
-    grid-column: span 31;
+    grid-column: span 4;
   }
 
   .columns__column--16 {
-    grid-column: span 31;
+    grid-column: span 4;
   }
 
   .columns__column--17 {
-    grid-column: span 31;
+    grid-column: span 4;
   }
 
   .columns__column--18 {
-    grid-column: span 31;
+    grid-column: span 4;
   }
 
   .columns__column--19 {
-    grid-column: span 31;
+    grid-column: span 4;
   }
 
   .columns__column--20 {
-    grid-column: span 31;
+    grid-column: span 4;
   }
 
   .columns__column--21 {
-    grid-column: span 31;
+    grid-column: span 4;
+  }
+
+  .columns__column--22 {
+    grid-column: span 4;
+  }
+
+  .columns__column--23 {
+    grid-column: span 4;
+  }
+
+  .columns__column--24 {
+    grid-column: span 4;
+  }
+
+  .columns__column--25 {
+    grid-column: span 4;
+  }
+
+  .columns__column--26 {
+    grid-column: span 4;
+  }
+
+  .columns__column--27 {
+    grid-column: span 4;
+  }
+
+  .columns__column--28 {
+    grid-column: span 4;
+  }
+
+  .columns__column--29 {
+    grid-column: span 4;
+  }
+
+  .columns__column--30 {
+    grid-column: span 4;
+  }
+
+  .columns__column--31 {
+    grid-column: span 4;
+  }
+
+  .columns__column--m-auto {
+    grid-column: auto;
+  }
+
+  .columns__column--m-2 {
+    grid-column: span 2;
   }
 }
 

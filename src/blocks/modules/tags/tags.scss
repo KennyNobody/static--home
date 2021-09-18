@@ -1,10 +1,13 @@
 .tags {
+    font-size: rem(26);
+    &--article {
+        font-size: rem(22);
+    }
     &__tag {
         color: $grey;
         text-decoration: none;
         display: inline-block;
         margin-right: rem(10);
-        font-size: rem(26);
         line-height: rem(38);
         @include r(1920) {
             line-height: rem(28);
