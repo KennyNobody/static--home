@@ -1,6 +1,9 @@
 .editor {
     overflow: hidden;
     text-overflow: ellipsis;
+    & > :last-child {
+        margin-bottom: 0;
+    }
     &--title {
         font-size: rem(24);
         line-height: rem(32);

@@ -71,6 +71,7 @@
             margin-bottom: rem(26);
         }
         @include r(1280) {
+            margin-bottom: rem(20);
             figure,
             picture,
             img {
