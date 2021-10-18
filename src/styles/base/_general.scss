@@ -14,6 +14,14 @@ button {
     font-family: inherit;
 }
 
+.border-top {
+    border-top: 1px solid #c4c4c4;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #c4c4c4;
+}
+
 .mb {
     &-10 {
         margin-bottom: rem(10);
@@ -59,7 +67,7 @@ button {
             margin-bottom: rem(37);
         }
     }
-     &-48 {
+    &-48 {
         @include r(1920) {
             margin-bottom: rem(48);
         }
@@ -73,37 +81,47 @@ button {
 
 .mbm {
     &-0 {
-        @include r(1200) {
+        @include r(1280) {
             margin-bottom: rem(0);
         }
     }
     &-15 {
-        @include r(1200) {
+        @include r(1280) {
             margin-bottom: rem(15);
         }
     }
     &-17 {
-        @include r(1200) {
+        @include r(1280) {
             margin-bottom: rem(17);
         }
     }
     &-20 {
-        @include r(1200) {
+        @include r(1280) {
             margin-bottom: rem(20);
         }
     }
+    &-22 {
+        @include r(1280) {
+            margin-bottom: rem(22);
+        }
+    }
+    &-25 {
+        @include r(1280) {
+            margin-bottom: rem(22);
+        }
+    }
     &-30 {
-        @include r(1200) {
+        @include r(1280) {
             margin-bottom: rem(30);
         }
     }
     &-32 {
-        @include r(1200) {
+        @include r(1280) {
             margin-bottom: rem(32);
         }
     }
     &-48 {
-        @include r(1200) {
+        @include r(1280) {
             margin-bottom: rem(48);
         }
     }
@@ -130,6 +148,9 @@ button {
     // }
     &-61 {
         padding-top: rem(61);
+    }
+    &-65 {
+        padding-top: rem(65);
     }
     &-70 {
         padding-top: rem(70);
@@ -168,6 +189,11 @@ button {
             padding-top: rem(50);
         }
     }
+    &-55 {
+        @include r(1920) {
+            padding-top: rem(55);
+        }
+    }
     &-61 {
         @include r(1920) {
             padding-top: rem(61);
@@ -177,43 +203,48 @@ button {
 
 .ptm {
     &-10 {
-        @include r(1200) {
+        @include r(1280) {
             padding-top: rem(10);
         }
     }
     &-12 {
-        @include r(1200) {
+        @include r(1280) {
             padding-top: rem(12);
         }
     }
     &-20 {
-        @include r(1200) {
+        @include r(1280) {
             padding-top: rem(20);
         }
     }
+    &-25 {
+        @include r(1280) {
+            padding-top: rem(25);
+        }
+    }
     &-26 {
-        @include r(1200) {
+        @include r(1280) {
             padding-top: rem(26);
         }
     }
     &-30 {
-        @include r(1200) {
+        @include r(1280) {
             padding-top: rem(30);
         }
     }
     &-33 {
-        @include r(1200) {
+        @include r(1280) {
             padding-top: rem(33);
         }
     }
     &-73 {
-        @include r(1200) {
+        @include r(1280) {
             padding-top: rem(73);
         }
     }
 }
 
-@include r(1200) {
+@include r(1280) {
 }
 
 .pb {
@@ -229,11 +260,17 @@ button {
     &-55 {
         padding-bottom: rem(55);
     }
+    &-65 {
+        padding-bottom: rem(55);
+    }
     &-75 {
         padding-bottom: rem(75);
     }
     &-100 {
         padding-bottom: rem(100);
+    }
+    &-120 {
+        padding-bottom: rem(120);
     }
     &-141 {
         padding-bottom: rem(141);
@@ -256,6 +293,11 @@ button {
             padding-bottom: rem(70);
         }
     }
+    &-75 {
+        @include r(1920) {
+            padding-bottom: rem(75);
+        }
+    }
     &-89 {
         @include r(1920) {
             padding-bottom: rem(89);
@@ -269,12 +311,22 @@ button {
             padding-bottom: rem(0);
         }
     }
+    &-5 {
+        @include r(1280) {
+            padding-bottom: rem(5);
+        }
+    }
     &-6 {
         @include r(1280) {
             padding-bottom: rem(6);
         }
     }
     &-20 {
+        @include r(1280) {
+            padding-bottom: rem(20);
+        }
+    }
+    &-25 {
         @include r(1280) {
             padding-bottom: rem(20);
         }
@@ -292,7 +344,7 @@ button {
 }
 
 .mob-hidden {
-    @include r(1200) {
+    @include r(1280) {
         visibility: hidden !important;
         display: none !important;
     }
@@ -301,12 +353,12 @@ button {
 .desktop-hidden {
     display: none;
     visibility: hidden;
-    @include r(1200) {
+    @include r(1280) {
         visibility: visible;
         display: block;
     }
     &--flex {
-        @include r(1200) {
+        @include r(1280) {
             display: flex;
         }
     }
@@ -314,47 +366,47 @@ button {
 
 .order-m {
     &-1 {
-        @include r(1200) {
+        @include r(1280) {
             order: 1;
         }
     }
     &-2 {
-        @include r(1200) {
+        @include r(1280) {
             order: 2;
         }
     }
     &-3 {
-        @include r(1200) {
+        @include r(1280) {
             order: 3;
         }
     }
     &-4 {
-        @include r(1200) {
+        @include r(1280) {
             order: 4;
         }
     }
     &-5 {
-        @include r(1200) {
+        @include r(1280) {
             order: 5;
         }
     }
     &-6 {
-        @include r(1200) {
+        @include r(1280) {
             order: 6;
         }
     }
     &-7 {
-        @include r(1200) {
+        @include r(1280) {
             order: 7;
         }
     }
     &-8 {
-        @include r(1200) {
+        @include r(1280) {
             order: 8;
         }
     }
     &-9 {
-        @include r(1200) {
+        @include r(1280) {
             order: 9;
         }
     }

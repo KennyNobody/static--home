@@ -1,0 +1,29 @@
+.pagination {
+    display: flex;
+    padding-top: rem(30);
+    padding-bottom: rem(30);
+    font-size: rem(26);
+    gap: rem(6);
+    @include r(1920) {
+        font-size: rem(22);
+    }
+    @include r(1280) {
+        font-size: rem(18);
+    }
+    * {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+    }
+    a {
+        transition: 0.3s all;
+        &:hover {
+            color: $grey;
+        }
+    }
+    .current {
+        position: relative;
+        pointer-events: none;
+        text-decoration: underline;
+    }
+}

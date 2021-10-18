@@ -9,7 +9,6 @@
 <body class="body">
     @@include("../blocks/modules/header/header.html")
     <main class="main">
-        <hr class="separator">
         <section class="section pt-38 ptt-22 pb-75 pbt-73 ptm-26 pbm-50">
             <div class="mb-40 mbt-37 mbm-32">
                 <a href="./" class="link-back">
@@ -34,14 +33,15 @@
                         <a href="" class="tags__tag">#ЯМЫГеннадий</a>
                         <a href="" class="tags__tag">#гдежегдежевотжетут</a>
                     </nav>
-                    @@include("../blocks/modules/share/share.html")
+                    <div class="mob-hidden">
+                        @@include("../blocks/modules/share/share.html")
+                    </div>
                 </div>
                 <div class="columns__column columns__column--19">
                     @@include("../blocks/modules/gallery/gallery.html")
                 </div>
             </div>
         </section>
-        <hr class="separator">
     </main>
     @@include("../blocks/modules/footer/footer.html")
     <script src="js/main.js"></script>

@@ -8,6 +8,7 @@
     font-weight: 400;
     position: relative;
     line-height: rem(74);
+    transition: 0.3s color;
     @include r(1920) {
         font-size: rem(45);
         line-height: rem(51);
@@ -16,8 +17,12 @@
         font-size: rem(30);
         font-weight: 500;
         line-height: rem(30);
+        font-family: $font-medium;
+        text-transform: none;
     }
+}
 
+a.title {
     &:hover {
         color: $grey;
     }

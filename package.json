@@ -71,7 +71,7 @@
         "yargs": "^15.4.1"
     },
     "dependencies": {
-        "@fancyapps/ui": "^4.0.4",
+        "@fancyapps/ui": "^4.0.5",
         "smart-grid": "^2.1.2"
     },
     "lint-staged": {

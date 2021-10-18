@@ -20,21 +20,19 @@
         }
     }
     &__links {
-        display: block;
-    }
-    &__link {
-        display: inline-block;
-        color: inherit;
-        margin-right: rem(25);
-        margin-bottom: rem(21);
+        display: flex;
+        gap: rem(10) rem(12);
+        flex-wrap: wrap;
         @include r(1920) {
-            margin-right: rem(20);
-            margin-bottom: rem(3);
+            gap: rem(10) rem(15);
         }
         @include r(1280) {
-            margin-bottom: rem(10);
+            gap: rem(10) rem(15);
         }
-
+    }
+    &__link {
+        display: block;
+        color: inherit;
         &:hover {
             text-decoration: none;
         }

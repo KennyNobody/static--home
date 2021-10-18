@@ -6,18 +6,28 @@
     @include r(1280) {
         padding-bottom: rem(17);
     }
+    &__preview-link {
+        color: inherit;
+        text-decoration: none;
+        display: block;
+        margin-bottom: rem(50);
+        transition: 0.3s opacity;
+        @include r(1920) {
+            margin-bottom: rem(30);
+        }
+        @include r(1280) {
+            margin-bottom: rem(19);
+        }
+        &:hover {
+            opacity: 0.8;
+        }
+    }
     &__preview {
-        display: none;
-        visibility: hidden;
+        display: block;
         img {
             display: block;
             width: 100%;
             height: auto;
-        }
-        @include r(1280) {
-            display: block;
-            visibility: visible;
-            margin-bottom: rem(19);
         }
     }
     &__tag {
@@ -61,7 +71,6 @@
             margin-bottom: rem(26);
         }
         @include r(1280) {
-            
             figure,
             picture,
             img {
