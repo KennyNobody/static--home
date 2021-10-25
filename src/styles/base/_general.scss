@@ -364,6 +364,20 @@ button {
     }
 }
 
+.t {
+    &-81 {
+        top: rem(81);
+    }
+}
+
+.tt {
+    &-61 {
+        @include r(1920) {
+            top: rem(61);
+        }
+    }
+}
+
 .mob-hidden {
     @include r(1280) {
         visibility: hidden !important;

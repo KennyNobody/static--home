@@ -1,0 +1,8 @@
+.sidebar {
+    &--sticky {
+        position: sticky;
+        @include r(1280) {
+            position: static;
+        }
+    }
+}
