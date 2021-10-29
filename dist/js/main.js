@@ -163,49 +163,61 @@
 /***/ (function(module, exports) {
 
 document.addEventListener('DOMContentLoaded', function () {
-  var el = document.querySelector('.color-picker');
-  setDefaultClass();
+  var el = document.querySelectorAll('.color-picker');
 
-  if (el) {
-    (function () {
-      var items = el.querySelectorAll('.color-picker__item');
-
-      var _loop = function _loop(i) {
-        items[i].addEventListener('click', function () {
-          setClass(items, items[i]);
-        });
-      };
-
-      for (var i = 0; i < items.length; i++) {
-        _loop(i);
-      }
-    })();
+  for (var i = 0; i < el.length; i++) {
+    initPicker(el[i]);
   }
 });
 
-var setDefaultClass = function setDefaultClass(items) {
-  document.body.classList.remove('body--light');
-  document.body.classList.remove('body--dark');
-  document.body.classList.remove('body--blue');
-  document.body.classList.remove('body--purple');
-  document.body.classList.remove('body--red');
-  var color = localStorage.getItem('color-theme');
-  document.body.classList.add('body--' + color);
+var initPicker = function initPicker(el) {
+  setDefaulut(el);
+  var items = el.querySelectorAll('.color-picker__item');
+
+  var _loop = function _loop(i) {
+    items[i].addEventListener('click', function () {
+      setTheme(items, items[i]);
+    });
+  };
+
+  for (var i = 0; i < items.length; i++) {
+    _loop(i);
+  }
 };
 
-var setClass = function setClass(items, el) {
+var setTheme = function setTheme(items, el) {
+  document.querySelector('#style').remove();
+
   for (var i = 0; i < items.length; i++) {
     items[i].classList.remove('color-picker__item--active');
   }
 
-  document.body.classList.remove('body--light');
-  document.body.classList.remove('body--dark');
-  document.body.classList.remove('body--blue');
-  document.body.classList.remove('body--purple');
-  document.body.classList.remove('body--red');
-  document.body.classList.add('body--' + el.getAttribute('data-color'));
-  localStorage.setItem('color-theme', el.getAttribute('data-color'));
+  var theme = el.getAttribute('data-color');
+
+  if (theme == 'red') {
+    document.head.insertAdjacentHTML("beforeend", "<style id=\"style\">:root{--main-bg-color:#EB5757;--title-color:#F3F2F3;--main-text-color:#101010;--discription-color:#101010;--border-color:#101010;--border-section-color:#101010}</style>");
+  } else if (theme == 'dark') {
+    document.head.insertAdjacentHTML("beforeend", "<style id=\"style\">:root{--main-bg-color:#1A1A1A;--main-text-color:#F3F2F3;--title-color:#F3F2F3;--discription-color:#F3F2F3;--border-color:#F3F2F3;--border-section-color:#F3F2F3}</style>");
+  } else if (theme == 'blue') {
+    document.head.insertAdjacentHTML("beforeend", "<style id=\"style\">:root{--main-bg-color:#2F80ED;--title-color:#F3F2F3;--main-text-color:#101010;--discription-color:#101010;--border-color:#101010;--border-section-color:#101010}</style>");
+  } else if (theme == 'purple') {
+    document.head.insertAdjacentHTML("beforeend", "<style id=\"style\">:root{--main-bg-color:#BB6BD9;--title-color:#F3F2F3;--main-text-color:#101010;--discription-color:#101010;--border-color:#101010;--border-section-color:#101010}</style>");
+  } else {
+    document.head.insertAdjacentHTML("beforeend", "<style id=\"style\">:root{--main-bg-color:#F3F2F3;--main-text-color:#101010;--title-color:#101010;--discription-color:#575757;--border-color:#bfbdbe;--border-section-color:#c4c4c4}</style>");
+  }
+
+  localStorage.setItem('color-theme', theme);
   el.classList.add('color-picker__item--active');
+};
+
+var setDefaulut = function setDefaulut(el) {
+  var theme = localStorage.getItem('color-theme');
+  console.log(el);
+
+  if (theme) {
+    var activeItem = el.querySelector('[data-color="' + theme + '"]');
+    activeItem.classList.add('color-picker__item--active');
+  }
 };
 
 /***/ }),
