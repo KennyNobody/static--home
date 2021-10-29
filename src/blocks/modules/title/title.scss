@@ -1,6 +1,6 @@
 .title {
     font-size: rem(65);
-    color: inherit;
+    color: var(--title-color);
     text-decoration: none;
     display: block;
     width: fit-content;
@@ -24,6 +24,6 @@
 
 a.title {
     &:hover {
-        color: $grey;
+        color: var(--discription-color);
     }
 }

@@ -20,7 +20,6 @@
     @include r(1280) {
         grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
         gap: 0;
-        // grid-template-columns: minmax(0, 1fr);
     }
     &__column {
         position: relative;

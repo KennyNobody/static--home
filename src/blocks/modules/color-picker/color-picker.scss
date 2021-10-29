@@ -1,0 +1,38 @@
+.color-picker {
+    display: flex;
+    &__item {
+        cursor: pointer;
+        transition: 0.3s all;
+        flex-shrink: 0;
+        height: rem(12);
+        width: rem(12);
+        border-radius: rem(12);
+        margin-right: rem(15);
+        padding: 0;
+        transition: 0.3s all;
+        overflow: hidden;
+        &:hover {
+            opacity: 0.7;
+        }
+        &--light {
+            background-color: #f3f2f3;
+        }
+        &--dark {
+            background-color: #1a1a1a;
+        }
+        &--blue {
+            background-color: #2f80ed;
+        }
+        &--purple {
+            background-color: #bb6bd9;
+        }
+        &--red {
+            background-color: #eb5757;
+        }
+        &--active {
+            border: 1px solid var(--main-text-color);
+            // max-width: 0;
+            // margin-right: 0;
+        }
+    }
+}

@@ -26,8 +26,8 @@
                 height: rem(42);
                 width: rem(42);
                 border-radius: rem(42);
-                border: 1px solid #bfbdbe;
-                background-color: $light;
+                border: 1px solid var(--border-color);
+                background-color: var(--main-bg-color);
                 transition: 0.3s opacity;
                 @include r(1920) {
                     height: rem(36);

@@ -1,9 +1,9 @@
 .body {
     font-size: rem(26);
     line-height: 1.5;
-    background-color: $light;
+    background-color: var(--main-bg-color);
     font-family: $font-book;
-    color: $dark;
+    color: var(--main-text-color);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -11,6 +11,7 @@
     padding-left: rem(65);
     padding-right: rem(65);
     line-height: rem(40);
+    transition: 0.3s all;
     @include r(1920) {
         padding-left: rem(45);
         padding-right: rem(45);
@@ -22,5 +23,46 @@
         padding-right: rem(15);
         font-size: rem(16);
         line-height: rem(26);
+    }
+
+    &--light {
+        --main-bg-color: #F3F2F3;
+        --main-text-color: #101010;
+        --title-color: #101010;
+        --discription-color: #575757;
+        --border-color: #bfbdbe;
+        --border-section-color: #c4c4c4;
+    }
+    &--dark {
+        --main-bg-color: #1A1A1A;
+        --main-text-color: #F3F2F3;
+        --title-color: #F3F2F3;
+        --discription-color: #F3F2F3;
+        --border-color: #F3F2F3;
+        --border-section-color: #F3F2F3;
+    }
+    &--blue {
+        --main-bg-color: #2F80ED;
+        --title-color: #F3F2F3;
+        --main-text-color: #101010;
+        --discription-color: #101010;
+        --border-color: #101010;
+        --border-section-color: #101010;
+    }
+    &--purple {
+        --main-bg-color: #BB6BD9;
+        --title-color: #F3F2F3;
+        --main-text-color: #101010;
+        --discription-color: #101010;
+        --border-color: #101010;
+        --border-section-color: #101010;
+    }
+    &--red {
+        --main-bg-color: #EB5757;
+        --title-color: #F3F2F3;
+        --main-text-color: #101010;
+        --discription-color: #101010;
+        --border-color: #101010;
+        --border-section-color: #101010;
     }
 }

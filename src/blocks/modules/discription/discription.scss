@@ -2,7 +2,7 @@
     font-size: rem(24);
     line-height: rem(32);
     display: block;
-    color: $grey;
+    color: var(--discription-color);
     @include r(1920) {
         font-size: rem(20);
         line-height: rem(30);
@@ -12,7 +12,7 @@
         line-height: rem(22);
     }
     &--dark {
-        color: $dark;
+        color: var(--main-text-color);
     }
     &--right {
         text-align: right;
@@ -21,7 +21,7 @@
         text-decoration: none;
         color: inherit;
         &:hover {
-            color: $grey;
+            color: var(--discription-color);
         }
         & + a {
             margin-left: rem(53);

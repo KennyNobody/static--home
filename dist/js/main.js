@@ -155,25 +155,58 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/blocks/modules/footer/footer.js":
-/*!*********************************************!*\
-  !*** ./src/blocks/modules/footer/footer.js ***!
-  \*********************************************/
+/***/ "./src/blocks/modules/color-picker/color-picker.js":
+/*!*********************************************************!*\
+  !*** ./src/blocks/modules/color-picker/color-picker.js ***!
+  \*********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+document.addEventListener('DOMContentLoaded', function () {
+  var el = document.querySelector('.color-picker');
+  setDefaultClass();
 
+  if (el) {
+    (function () {
+      var items = el.querySelectorAll('.color-picker__item');
 
-/***/ }),
+      var _loop = function _loop(i) {
+        items[i].addEventListener('click', function () {
+          setClass(items, items[i]);
+        });
+      };
 
-/***/ "./src/blocks/modules/header/header.js":
-/*!*********************************************!*\
-  !*** ./src/blocks/modules/header/header.js ***!
-  \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+      for (var i = 0; i < items.length; i++) {
+        _loop(i);
+      }
+    })();
+  }
+});
 
+var setDefaultClass = function setDefaultClass(items) {
+  document.body.classList.remove('body--light');
+  document.body.classList.remove('body--dark');
+  document.body.classList.remove('body--blue');
+  document.body.classList.remove('body--purple');
+  document.body.classList.remove('body--red');
+  var color = localStorage.getItem('color-theme');
+  document.body.classList.add('body--' + color);
+};
 
+var setClass = function setClass(items, el) {
+  for (var i = 0; i < items.length; i++) {
+    items[i].classList.remove('color-picker__item--active');
+  }
+
+  document.body.classList.remove('body--light');
+  document.body.classList.remove('body--dark');
+  document.body.classList.remove('body--blue');
+  document.body.classList.remove('body--purple');
+  document.body.classList.remove('body--red');
+  document.body.classList.add('body--' + el.getAttribute('data-color'));
+  localStorage.setItem('color-theme', el.getAttribute('data-color'));
+  el.classList.add('color-picker__item--active');
+};
 
 /***/ }),
 
@@ -187,11 +220,8 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _fancyapps_ui__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @fancyapps/ui */ "./node_modules/@fancyapps/ui/dist/fancybox.esm.js");
-/* harmony import */ var _modules_header_header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! %modules%/header/header */ "./src/blocks/modules/header/header.js");
-/* harmony import */ var _modules_header_header__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_header_header__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! %modules%/footer/footer */ "./src/blocks/modules/footer/footer.js");
-/* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_footer_footer__WEBPACK_IMPORTED_MODULE_2__);
-
+/* harmony import */ var _modules_color_picker_color_picker__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! %modules%/color-picker/color-picker */ "./src/blocks/modules/color-picker/color-picker.js");
+/* harmony import */ var _modules_color_picker_color_picker__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_color_picker_color_picker__WEBPACK_IMPORTED_MODULE_1__);
 
 
 

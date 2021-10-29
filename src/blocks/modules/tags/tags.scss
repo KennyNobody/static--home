@@ -4,7 +4,7 @@
         font-size: rem(22);
     }
     &__tag {
-        color: $grey;
+        color: var(--discription-color);
         text-decoration: none;
         display: inline-block;
         margin-right: rem(10);
