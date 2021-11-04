@@ -139,5 +139,17 @@
             @include r(1280) {
             }
         }
+        iframe {
+            display: block;
+            width: 100%;
+            height: rem(600);
+            margin-bottom: 2rem;
+            @include r(1920) {
+                height: rem(520);
+            }
+            @include r(1280) {
+                height: rem(420);
+            }
+        }
     }
 }

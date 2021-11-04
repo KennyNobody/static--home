@@ -3,7 +3,9 @@
     gap: rem(15);
     @include r(1280) {
         width: 100%;
-        justify-content: flex-end;
+        justify-content: center;
+        flex-basis: content;
+        // justify-content: flex-end;
     }
     &__item {
         cursor: pointer;
@@ -28,12 +30,18 @@
         }
         &--blue {
             background-color: #2f80ed;
+            display: none;
+            visibility: hidden;
         }
         &--purple {
             background-color: #bb6bd9;
+            display: none;
+            visibility: hidden;
         }
         &--red {
             background-color: #eb5757;
+            display: none;
+            visibility: hidden;
         }
         &--active {
             border: 1px solid var(--main-text-color);

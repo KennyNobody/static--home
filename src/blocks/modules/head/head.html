@@ -22,3 +22,24 @@
 <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
 <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
 <link rel="stylesheet" href="styles/main.css">
+<script>
+    let theme = localStorage.getItem('color-theme');
+
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        console.log('Черная тема');
+    } else {
+        console.log('Светлая тема');
+    }
+
+    if (theme == 'red') {
+        document.head.insertAdjacentHTML("beforeend", `<style id="style">:root{--main-bg-color:#EB5757;--title-color:#F3F2F3;--main-text-color:#101010;--discription-color:#101010;--border-color:#101010;--border-section-color:#101010}</style>`)
+    } else if (theme == 'dark') {
+        document.head.insertAdjacentHTML("beforeend", `<style id="style">:root{--main-bg-color:#1A1A1A;--main-text-color:#F3F2F3;--title-color:#F3F2F3;--discription-color:#F3F2F3;--border-color:#F3F2F3;--border-section-color:#F3F2F3}</style>`);
+    } else if (theme == 'blue') {
+        document.head.insertAdjacentHTML("beforeend", `<style id="style">:root{--main-bg-color:#2F80ED;--title-color:#F3F2F3;--main-text-color:#101010;--discription-color:#101010;--border-color:#101010;--border-section-color:#101010}</style>`);
+    } else if (theme == 'purple') {
+        document.head.insertAdjacentHTML("beforeend", `<style id="style">:root{--main-bg-color:#BB6BD9;--title-color:#F3F2F3;--main-text-color:#101010;--discription-color:#101010;--border-color:#101010;--border-section-color:#101010}</style>`);
+    } else {
+        document.head.insertAdjacentHTML("beforeend", `<style id="style">:root{--main-bg-color:#F3F2F3;--main-text-color:#101010;--title-color:#101010;--discription-color:#575757;--border-color:#bfbdbe;--border-section-color:#c4c4c4}</style>`);
+    }
+</script>

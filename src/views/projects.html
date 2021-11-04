@@ -7,34 +7,33 @@
 </head>
 
 <body class="body">
-    <div class="page">
-        @@include("../blocks/modules/header/header.html")
-        <main class="main">
-            <hr class="separator">
-            <section class="section pt-70 ptt-50 ptm-30 pb-100 pbt-70 pbm-0">
-                <div class="columns">
-                    <div class="columns__column columns__column--12">
-                        <a href="./projects.html" class="title mb-11 mbt-14 mbm-20">
-                            Проекты и серии
-                        </a>
-                        <p class="discription mob-hidden">
-                            Здесь собраны проекты и макулатура
-                        </p>
-                    </div>
-                    <div class="columns__column columns__column--19">
-                        <div class="articles">
-                            <div class="articles__content">
-                                @@include("../blocks/modules/article-project/article-project.html")
-                                @@include("../blocks/modules/article-project/article-project.html")
-                            </div>
+    @@include("../blocks/modules/header/header.html")
+    <main class="main">
+        <hr class="separator">
+        <section class="section pt-70 ptt-50 ptm-30 pb-100 pbt-70 pbm-0">
+            <div class="columns">
+                <div class="columns__column columns__column--12">
+                    <a href="./projects.html" class="title mb-11 mbt-14 mbm-20">
+                        Проекты и серии
+                    </a>
+                    <p class="discription mob-hidden">
+                        Здесь собраны проекты и макулатура
+                    </p>
+                </div>
+                <div class="columns__column columns__column--19">
+                    <div class="articles">
+                        <div class="articles__content">
+                            @@include("../blocks/modules/article-project/article-project.html")
+                            @@include("../blocks/modules/article-project/article-project.html")
                         </div>
                     </div>
                 </div>
-            </section>
-            <hr class="separator">
-        </main>
-        @@include("../blocks/modules/footer/footer.html")
-    </div>
+            </div>
+        </section>
+        <hr class="separator">
+    </main>
+    @@include("../blocks/modules/footer/footer.html")
+
     <script src="js/main.js"></script>
     <script src="js/vendor.js"></script>
 </body>

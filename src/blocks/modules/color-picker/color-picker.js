@@ -48,11 +48,8 @@ let setTheme = (items, el) => {
 let setDefaulut = (el) => {
     let theme = localStorage.getItem('color-theme');
 
-    console.log(el);
-
     if (theme) {
         let activeItem = el.querySelector('[data-color="' + theme + '"]');
-
         activeItem.classList.add('color-picker__item--active');
     }
 }

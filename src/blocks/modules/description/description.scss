@@ -1,4 +1,4 @@
-.discription {
+.description {
     font-size: rem(24);
     line-height: rem(32);
     display: block;
@@ -17,14 +17,22 @@
     &--right {
         text-align: right;
     }
-    a {
-        text-decoration: none;
+    &__link {
+        text-decoration: underline;
         color: inherit;
         &:hover {
-            color: var(--discription-color);
+            text-decoration: none;
         }
-        & + a {
+        // &--regular {
+
+        // }
+        &--social {
             margin-left: rem(53);
+            text-decoration: none;
+            
+            &:hover {
+                color: var(--discription-color);
+            }
             @include r(1920) {
                 margin-left: rem(37);
             }

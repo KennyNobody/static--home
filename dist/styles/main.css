@@ -1422,6 +1422,7 @@ body.is-using-mouse .fancybox__container :focus {
 
 @font-face {
   font-family: 'FuturaBookC';
+  font-display: swap;
   src: url("../fonts/futurabookc.eot");
   /* IE 9 Compatibility Mode */
   src: url("../fonts/futurabookc.eot?#iefix") format("embedded-opentype"), url("../fonts/futurabookc.woff2") format("woff2"), url("../fonts/futurabookc.woff") format("woff"), url("../fonts/futurabookc.ttf") format("truetype"), url("../fonts/futurabookc.svg#futurabookc") format("svg");
@@ -1430,6 +1431,7 @@ body.is-using-mouse .fancybox__container :focus {
 
 @font-face {
   font-family: 'FuturaMediumC';
+  font-display: swap;
   src: url("../fonts/futuramediumc.eot");
   /* IE 9 Compatibility Mode */
   src: url("../fonts/futuramediumc.eot?#iefix") format("embedded-opentype"), url("../fonts/futuramediumc.woff2") format("woff2"), url("../fonts/futuramediumc.woff") format("woff"), url("../fonts/futuramediumc.ttf") format("truetype"), url("../fonts/futuramediumc.svg#futuramediumc") format("svg");
@@ -1601,11 +1603,30 @@ button {
   padding-right: 4.0625rem;
   line-height: 2.5rem;
   transition: 0.3s all;
+  overflow-y: overlay;
 }
 
 .footer {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.footer__column {
+  flex-basis: 0;
+  flex-grow: 1;
+}
+
+.footer__column--control {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.footer__column--links {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
 }
 
 /**/
@@ -1764,32 +1785,37 @@ button {
 
 /**/
 
-.discription {
+.description {
   font-size: 1.5rem;
   line-height: 2rem;
   display: block;
   color: var(--discription-color);
 }
 
-.discription--dark {
+.description--dark {
   color: var(--main-text-color);
 }
 
-.discription--right {
+.description--right {
   text-align: right;
 }
 
-.discription a {
-  text-decoration: none;
+.description__link {
+  text-decoration: underline;
   color: inherit;
 }
 
-.discription a:hover {
-  color: var(--discription-color);
+.description__link:hover {
+  text-decoration: none;
 }
 
-.discription a + a {
+.description__link--social {
   margin-left: 3.3125rem;
+  text-decoration: none;
+}
+
+.description__link--social:hover {
+  color: var(--discription-color);
 }
 
 .editor {
@@ -1892,6 +1918,13 @@ button {
   color: var(--discription-color);
 }
 
+.editor--post iframe {
+  display: block;
+  width: 100%;
+  height: 37.5rem;
+  margin-bottom: 2rem;
+}
+
 /**/
 
 .title {
@@ -1940,10 +1973,6 @@ a.title:hover {
   color: var(--title-color);
 }
 
-.link:hover {
-  color: var(--discription-color);
-}
-
 .link--active:after {
   position: absolute;
   top: calc(100% - 5px);
@@ -1953,6 +1982,10 @@ a.title:hover {
   width: 100%;
   left: 0;
   content: "";
+}
+
+a.link:hover {
+  color: var(--discription-color);
 }
 
 .link-back {
@@ -1965,16 +1998,17 @@ a.title:hover {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 3.375rem 3.5625rem;
+  text-decoration: none;
 }
 
-.gallery .gallery-item {
+.gallery__item {
   display: block;
   color: inherit;
   text-decoration: none;
   margin: 0;
 }
 
-.gallery .gallery-item:hover {
+.gallery__item:hover {
   opacity: 0.7;
 }
 
@@ -1984,14 +2018,14 @@ a.title:hover {
   height: auto;
 }
 
-.gallery__img {
+.gallery__picture img {
   display: block;
   width: 100%;
   height: auto;
 }
 
-.gallery__discription {
-  font-size: 1.625rem;
+.gallery__caption {
+  font-size: 1.5rem;
   line-height: 2.5rem;
   margin-bottom: 2.125rem;
 }
@@ -2094,6 +2128,10 @@ a.title:hover {
 
 .article-post {
   padding-bottom: 3.75rem;
+}
+
+.article-post:last-of-type {
+  border-bottom: none;
 }
 
 .article-post__preview-link {
@@ -2236,6 +2274,7 @@ a.title:hover {
 .categories__link {
   display: block;
   color: inherit;
+  text-transform: lowercase;
 }
 
 .categories__link:hover {
@@ -2274,14 +2313,20 @@ a.title:hover {
 
 .color-picker__item--blue {
   background-color: #2f80ed;
+  display: none;
+  visibility: hidden;
 }
 
 .color-picker__item--purple {
   background-color: #bb6bd9;
+  display: none;
+  visibility: hidden;
 }
 
 .color-picker__item--red {
   background-color: #eb5757;
+  display: none;
+  visibility: hidden;
 }
 
 .color-picker__item--active {
@@ -2401,12 +2446,12 @@ a.title:hover {
     gap: 2.4375rem;
   }
 
-  .discription {
+  .description {
     font-size: 1.25rem;
     line-height: 1.875rem;
   }
 
-  .discription a + a {
+  .description__link--social {
     margin-left: 2.3125rem;
   }
 
@@ -2449,6 +2494,10 @@ a.title:hover {
     font-size: 1.125rem;
   }
 
+  .editor--post iframe {
+    height: 32.5rem;
+  }
+
   .title {
     font-size: 2.8125rem;
     line-height: 3.1875rem;
@@ -2472,12 +2521,12 @@ a.title:hover {
     gap: 2.375rem 2.375rem;
   }
 
-  .gallery .gallery-item {
+  .gallery__item {
     grid-column: span 2;
   }
 
-  .gallery__discription {
-    font-size: 1.375rem;
+  .gallery__caption {
+    font-size: 1.25rem;
     line-height: 2.25rem;
     margin-bottom: 1.875rem;
   }
@@ -2732,6 +2781,26 @@ a.title:hover {
 
   .footer {
     border: none;
+    flex-wrap: wrap;
+    row-gap: 10px;
+  }
+
+  .footer__column {
+    flex-basis: auto;
+  }
+
+  .footer__column--description {
+    order: -1;
+    flex-basis: 100%;
+  }
+
+  .footer__column--control {
+    order: -3;
+    justify-content: flex-start;
+  }
+
+  .footer__column--links {
+    order: -2;
   }
 
   .nav * {
@@ -2877,12 +2946,12 @@ a.title:hover {
     grid-column: span 2;
   }
 
-  .discription {
+  .description {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 
-  .discription a + a {
+  .description__link--social {
     margin-left: 0.9375rem;
   }
 
@@ -2919,6 +2988,10 @@ a.title:hover {
   .editor--post figure {
     margin-top: 2.25rem;
     margin-bottom: 2.25rem;
+  }
+
+  .editor--post iframe {
+    height: 26.25rem;
   }
 
   .title {
@@ -2962,7 +3035,12 @@ a.title:hover {
     grid-template-columns: minmax(0, 1fr);
   }
 
-  .gallery__discription {
+  .gallery__item:hover {
+    opacity: 1;
+    text-decoration: underline;
+  }
+
+  .gallery__caption {
     margin-bottom: 1.375rem;
     font-size: 1rem;
     line-height: 1.375rem;
@@ -3074,7 +3152,8 @@ a.title:hover {
 
   .color-picker {
     width: 100%;
-    justify-content: flex-end;
+    justify-content: center;
+    flex-basis: content;
   }
 }
 

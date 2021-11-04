@@ -6,6 +6,9 @@
     @include r(1280) {
         padding-bottom: rem(17);
     }
+    &:last-of-type {
+        border-bottom: none;
+    }
     &__preview-link {
         color: inherit;
         text-decoration: none;

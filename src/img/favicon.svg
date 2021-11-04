@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+	<style type="text/css">
+	@media (prefers-color-scheme: dark) {
++   	.icon {
+			fill: #1A1A1A;
+		}
++   }
+	@media (prefers-color-scheme: light) {
+		.icon {
+			fill: #F3F2F3;
+		}
+	}
+	</style>
+	<path class="icon" d="M512.5 0.5H0.5V512.5H512.5V0.5Z" />
+</svg>

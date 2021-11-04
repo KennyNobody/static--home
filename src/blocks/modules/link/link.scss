@@ -31,9 +31,7 @@
             font-size: rem(16);
         }
     }
-    &:hover {
-        color: var(--discription-color);
-    }
+
     &--active {
         &:after {
             position: absolute;
@@ -49,5 +47,11 @@
                 height: 2px;
             }
         }
+    }
+}
+
+a.link {
+    &:hover {
+        color: var(--discription-color);
     }
 }

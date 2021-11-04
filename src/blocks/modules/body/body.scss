@@ -12,6 +12,7 @@
     padding-right: rem(65);
     line-height: rem(40);
     transition: 0.3s all;
+    overflow-y: overlay;
     @include r(1920) {
         padding-left: rem(45);
         padding-right: rem(45);

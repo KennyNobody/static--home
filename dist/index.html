@@ -27,21 +27,27 @@
 <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
 <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
 <link rel="stylesheet" href="styles/main.css">
-    <script>
-        let theme = localStorage.getItem('color-theme');
+<script>
+    let theme = localStorage.getItem('color-theme');
 
-        if (theme == 'red') {
-            document.head.insertAdjacentHTML("beforeend", `<style id="style">:root{--main-bg-color:#EB5757;--title-color:#F3F2F3;--main-text-color:#101010;--discription-color:#101010;--border-color:#101010;--border-section-color:#101010}</style>`)
-        } else if (theme == 'dark') {
-            document.head.insertAdjacentHTML("beforeend", `<style id="style">:root{--main-bg-color:#1A1A1A;--main-text-color:#F3F2F3;--title-color:#F3F2F3;--discription-color:#F3F2F3;--border-color:#F3F2F3;--border-section-color:#F3F2F3}</style>`);
-        } else if (theme == 'blue') {
-            document.head.insertAdjacentHTML("beforeend", `<style id="style">:root{--main-bg-color:#2F80ED;--title-color:#F3F2F3;--main-text-color:#101010;--discription-color:#101010;--border-color:#101010;--border-section-color:#101010}</style>`);
-        } else if (theme == 'purple') {
-            document.head.insertAdjacentHTML("beforeend", `<style id="style">:root{--main-bg-color:#BB6BD9;--title-color:#F3F2F3;--main-text-color:#101010;--discription-color:#101010;--border-color:#101010;--border-section-color:#101010}</style>`);
-        } else {
-            document.head.insertAdjacentHTML("beforeend", `<style id="style">:root{--main-bg-color:#F3F2F3;--main-text-color:#101010;--title-color:#101010;--discription-color:#575757;--border-color:#bfbdbe;--border-section-color:#c4c4c4}</style>`);
-        }
-    </script>
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        console.log('Черная тема');
+    } else {
+        console.log('Светлая тема');
+    }
+
+    if (theme == 'red') {
+        document.head.insertAdjacentHTML("beforeend", `<style id="style">:root{--main-bg-color:#EB5757;--title-color:#F3F2F3;--main-text-color:#101010;--discription-color:#101010;--border-color:#101010;--border-section-color:#101010}</style>`)
+    } else if (theme == 'dark') {
+        document.head.insertAdjacentHTML("beforeend", `<style id="style">:root{--main-bg-color:#1A1A1A;--main-text-color:#F3F2F3;--title-color:#F3F2F3;--discription-color:#F3F2F3;--border-color:#F3F2F3;--border-section-color:#F3F2F3}</style>`);
+    } else if (theme == 'blue') {
+        document.head.insertAdjacentHTML("beforeend", `<style id="style">:root{--main-bg-color:#2F80ED;--title-color:#F3F2F3;--main-text-color:#101010;--discription-color:#101010;--border-color:#101010;--border-section-color:#101010}</style>`);
+    } else if (theme == 'purple') {
+        document.head.insertAdjacentHTML("beforeend", `<style id="style">:root{--main-bg-color:#BB6BD9;--title-color:#F3F2F3;--main-text-color:#101010;--discription-color:#101010;--border-color:#101010;--border-section-color:#101010}</style>`);
+    } else {
+        document.head.insertAdjacentHTML("beforeend", `<style id="style">:root{--main-bg-color:#F3F2F3;--main-text-color:#101010;--title-color:#101010;--discription-color:#575757;--border-color:#bfbdbe;--border-section-color:#c4c4c4}</style>`);
+    }
+</script>
 </head>
 
 <body class="body">
@@ -60,18 +66,18 @@
                 <a href="" class="link link--active">
                     Проекты
                 </a>
-                <a href="" class="link">
+                <!-- <a href="" class="link">
                     События
-                </a>
+                </a> -->
                 <a href="" class="link">
                     Блог
                 </a>
                 <a href="" class="link">
                     CV
                 </a>
-                <a href="" class="link">
+                <!-- <a href="" class="link">
                     ENG
-                </a>
+                </a> -->
             </nav>
         </div>
     </div>
@@ -83,13 +89,6 @@
                     <!-- <p class="discription discription--dark">
                         <a href="">mail@egor.badulin.com</a>
                     </p> -->
-                    <div class="color-picker">
-    <button class="color-picker__item color-picker__item--light color-picker__item--active" data-color="light"></button>
-    <button class="color-picker__item color-picker__item--dark" data-color="dark"></button>
-    <button class="color-picker__item color-picker__item--blue" data-color="blue"></button>
-    <button class="color-picker__item color-picker__item--purple" data-color="purple"></button>
-    <button class="color-picker__item color-picker__item--red" data-color="red"></button>
-</div>
                 </div>
                 <div class="columns__column columns__column--19">
                     <div class="editor editor--title">
@@ -240,16 +239,27 @@
         </section>
     </main>
     <footer class="footer pt-31 pb-23 ptt-27 pbt-19 ptm-12 pbm-6 border-top">
-    <div class="footer__grow">
-        <p class="discription discription--dark">
-            2019 — 2021
+    <div class="footer__column footer__column--description">
+        <p class="description description--dark">
+            2019 — 2021 | Разработано: <a class="description__link" href="">Егор Бадулин</a>
         </p>
     </div>
-    <p class="discription discription--dark">
-        <a href="https://www.instagram.com/kenny_nobody/">Inst</a>
-        <a href="">Tg</a>
-        <a href="">Fb</a>
-    </p>
+    <div class="footer__column footer__column--control">
+        <div class="color-picker">
+    <button class="color-picker__item color-picker__item--light color-picker__item--active" data-color="light"></button>
+    <button class="color-picker__item color-picker__item--dark" data-color="dark"></button>
+    <button class="color-picker__item color-picker__item--blue" data-color="blue"></button>
+    <button class="color-picker__item color-picker__item--purple" data-color="purple"></button>
+    <button class="color-picker__item color-picker__item--red" data-color="red"></button>
+</div>
+    </div>
+    <div class="footer__column footer__column--links">
+        <p class="description description--dark">
+            <a class="description__link description__link--social" href="https://www.instagram.com/kenny_nobody/">Inst</a>
+            <a class="description__link description__link--social" href="">Tg</a>
+            <a class="description__link description__link--social" href="">Fb</a>
+        </p>
+    </div>
 </footer>
     <script src="js/main.js"></script>
     <script src="js/vendor.js"></script>

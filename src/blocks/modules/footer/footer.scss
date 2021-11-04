@@ -1,11 +1,40 @@
 .footer {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     @include r(1280) {
         border: none;
+        flex-wrap: wrap;
+        row-gap: 10px;
     }
-    &__email {
-    }
-    &__links {
+    &__column {
+        flex-basis: 0;
+        flex-grow: 1;
+        @include r(1280) {
+            flex-basis: auto;
+        }
+        &--description {
+            @include r(1280) {
+                order: -1;
+                flex-basis: 100%;
+            }
+        }
+        &--control {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            @include r(1280) {
+                order: -3;
+                justify-content: flex-start;
+            }
+        }
+        &--links {
+            align-items: center;
+            display: flex;
+            justify-content: flex-end;
+            @include r(1280) {
+                order: -2;
+            }
+        }
     }
 }
