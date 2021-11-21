@@ -4,85 +4,85 @@
 <head>
     <title>Одиночный проект</title>
     <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<meta name="theme-color" content="#fff">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-<link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
-<link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
-<link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
-<link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
-<link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
-<link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
-<link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
-<link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
-<link rel="stylesheet" href="styles/main.min.css">
-<script>
-    let theme = localStorage.getItem('color-theme');
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+    <link rel="stylesheet" href="styles/main.min.css">
+    <script>
+        let theme = localStorage.getItem('color-theme');
 
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        console.log('Черная тема');
-    } else {
-        console.log('Светлая тема');
-    }
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            console.log('Черная тема');
+        } else {
+            console.log('Светлая тема');
+        }
 
-    if (theme == 'red') {
-        document.head.insertAdjacentHTML("beforeend", `<style id="style">:root{--main-bg-color:#EB5757;--title-color:#F3F2F3;--main-text-color:#101010;--discription-color:#101010;--border-color:#101010;--border-section-color:#101010}</style>`)
-    } else if (theme == 'dark') {
-        document.head.insertAdjacentHTML("beforeend", `<style id="style">:root{--main-bg-color:#1A1A1A;--main-text-color:#F3F2F3;--title-color:#F3F2F3;--discription-color:#F3F2F3;--border-color:#F3F2F3;--border-section-color:#F3F2F3}</style>`);
-    } else if (theme == 'blue') {
-        document.head.insertAdjacentHTML("beforeend", `<style id="style">:root{--main-bg-color:#2F80ED;--title-color:#F3F2F3;--main-text-color:#101010;--discription-color:#101010;--border-color:#101010;--border-section-color:#101010}</style>`);
-    } else if (theme == 'purple') {
-        document.head.insertAdjacentHTML("beforeend", `<style id="style">:root{--main-bg-color:#BB6BD9;--title-color:#F3F2F3;--main-text-color:#101010;--discription-color:#101010;--border-color:#101010;--border-section-color:#101010}</style>`);
-    } else {
-        document.head.insertAdjacentHTML("beforeend", `<style id="style">:root{--main-bg-color:#F3F2F3;--main-text-color:#101010;--title-color:#101010;--discription-color:#575757;--border-color:#bfbdbe;--border-section-color:#c4c4c4}</style>`);
-    }
-</script>
+        if (theme == 'red') {
+            document.head.insertAdjacentHTML("beforeend", `<style id="style">:root{--main-bg-color:#EB5757;--title-color:#F3F2F3;--main-text-color:#101010;--discription-color:#101010;--border-color:#101010;--border-section-color:#101010}</style>`)
+        } else if (theme == 'dark') {
+            document.head.insertAdjacentHTML("beforeend", `<style id="style">:root{--main-bg-color:#1A1A1A;--main-text-color:#F3F2F3;--title-color:#F3F2F3;--discription-color:#F3F2F3;--border-color:#F3F2F3;--border-section-color:#F3F2F3}</style>`);
+        } else if (theme == 'blue') {
+            document.head.insertAdjacentHTML("beforeend", `<style id="style">:root{--main-bg-color:#2F80ED;--title-color:#F3F2F3;--main-text-color:#101010;--discription-color:#101010;--border-color:#101010;--border-section-color:#101010}</style>`);
+        } else if (theme == 'purple') {
+            document.head.insertAdjacentHTML("beforeend", `<style id="style">:root{--main-bg-color:#BB6BD9;--title-color:#F3F2F3;--main-text-color:#101010;--discription-color:#101010;--border-color:#101010;--border-section-color:#101010}</style>`);
+        } else {
+            document.head.insertAdjacentHTML("beforeend", `<style id="style">:root{--main-bg-color:#F3F2F3;--main-text-color:#101010;--title-color:#101010;--discription-color:#575757;--border-color:#bfbdbe;--border-section-color:#c4c4c4}</style>`);
+        }
+    </script>
 </head>
 
 <body class="body">
 
     <header class="header ptm-21 border-bottom">
-    <div class="columns">
-        <div class="columns__column columns__column--12 columns__column--m-2 mbm-15">
-            <a href="./" class="link link--name">Егор Бадулин</a>
-        </div>
-        <div class="columns__column columns__column--m-2 desktop-hidden mbm-15">
-            <p class="discription discription--right discription--dark">
-                <a href="">mail@egor.badulin.com</a>
-            </p>
-        </div>
-        <div class="columns__column columns__column--19">
-            <nav class="nav">
-                <a href="" class="link link--active">
-                    Проекты
-                </a>
-                <!-- <a href="" class="link">
+        <div class="columns">
+            <div class="columns__column columns__column--12 columns__column--m-2 mbm-15">
+                <a href="./" class="link link--name">Егор Бадулин</a>
+            </div>
+            <div class="columns__column columns__column--m-2 desktop-hidden mbm-15">
+                <p class="discription discription--right discription--dark">
+                    <a href="">mail@egor.badulin.com</a>
+                </p>
+            </div>
+            <div class="columns__column columns__column--19">
+                <nav class="nav">
+                    <a href="" class="link link--active">
+                        Проекты
+                    </a>
+                    <!-- <a href="" class="link">
                     События
                 </a> -->
-                <a href="" class="link">
-                    Блог
-                </a>
-                <a href="" class="link">
-                    CV
-                </a>
-                <!-- <a href="" class="link">
+                    <a href="" class="link">
+                        Блог
+                    </a>
+                    <a href="" class="link">
+                        CV
+                    </a>
+                    <!-- <a href="" class="link">
                     ENG
                 </a> -->
-            </nav>
+                </nav>
+            </div>
         </div>
-    </div>
-</header>
+    </header>
     <main class="main">
         <hr class="separator">
         <section class="section pt-38 ptt-22 pb-75 pbt-73 ptm-26 pbm-50">
@@ -112,15 +112,16 @@
                         </nav>
                         <div class="mob-hidden">
                             <div class="share">
-    <p class="share__title">
-        Поделиться:
-    </p>
-    <div class="share__content">
-        <script src="https://yastatic.net/share2/share.min.js"></script>
-        <div class="ya-share2" data-curtain data-shape="round" data-color-scheme="whiteblack"
-            data-services="vkontakte,facebook,telegram,twitter"></div>
-    </div>
-</div>
+                                <p class="share__title">
+                                    Поделиться:
+                                </p>
+                                <div class="share__content">
+                                    <script src="https://yastatic.net/share2/share.min.js"></script>
+                                    <div class="ya-share2" data-curtain data-shape="round"
+                                        data-color-scheme="whiteblack"
+                                        data-services="vkontakte,facebook,telegram,twitter"></div>
+                                </div>
+                            </div>
                         </div>
                     </aside>
                 </div>
@@ -201,28 +202,30 @@
         <hr class="separator">
     </main>
     <footer class="footer pt-31 pb-23 ptt-27 pbt-19 ptm-12 pbm-6 border-top">
-    <div class="footer__column footer__column--description">
-        <p class="description description--dark">
-            2019 — 2021 | Разработано: <a class="description__link" href="">Егор Бадулин</a>
-        </p>
-    </div>
-    <div class="footer__column footer__column--control">
-        <div class="color-picker">
-    <button class="color-picker__item color-picker__item--light color-picker__item--active" data-color="light"></button>
-    <button class="color-picker__item color-picker__item--dark" data-color="dark"></button>
-    <button class="color-picker__item color-picker__item--blue" data-color="blue"></button>
-    <button class="color-picker__item color-picker__item--purple" data-color="purple"></button>
-    <button class="color-picker__item color-picker__item--red" data-color="red"></button>
-</div>
-    </div>
-    <div class="footer__column footer__column--links">
-        <p class="description description--dark">
-            <a class="description__link description__link--social" href="https://www.instagram.com/kenny_nobody/">Inst</a>
-            <a class="description__link description__link--social" href="">Tg</a>
-            <a class="description__link description__link--social" href="">Fb</a>
-        </p>
-    </div>
-</footer>
+        <div class="footer__column footer__column--description">
+            <p class="description description--dark">
+                2019 — 2021 | Разработано: <a class="description__link" href="">Егор Бадулин</a>
+            </p>
+        </div>
+        <div class="footer__column footer__column--control">
+            <div class="color-picker">
+                <button class="color-picker__item color-picker__item--light color-picker__item--active"
+                    data-color="light"></button>
+                <button class="color-picker__item color-picker__item--dark" data-color="dark"></button>
+                <button class="color-picker__item color-picker__item--blue" data-color="blue"></button>
+                <button class="color-picker__item color-picker__item--purple" data-color="purple"></button>
+                <button class="color-picker__item color-picker__item--red" data-color="red"></button>
+            </div>
+        </div>
+        <div class="footer__column footer__column--links">
+            <p class="description description--dark">
+                <a class="description__link description__link--social"
+                    href="https://www.instagram.com/kenny_nobody/">Inst</a>
+                <a class="description__link description__link--social" href="">Tg</a>
+                <a class="description__link description__link--social" href="">Fb</a>
+            </p>
+        </div>
+    </footer>
     <script src="https://cdn.min.jsdelivr.net/npm/@fancyapps/ui@4.0.8/dist/fancybox.esm.min.js"></script>
     <script src="js/main.min.js"></script>
     <script src="js/vendor.min.js"></script>
